@@ -7,14 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 //MARK: AssistiveButton
-open class AssistiveButton: UIButton {
+public class AssistiveButton: UIButton {
     
     //MARK: Public Var
-    open var moveEnable = true
+    public var moveEnable = true
     
-    open var didTap: (()->())?
+    public var didTap: (()->())?
     
     //MARK: Init
     public init(frame: CGRect,normalImage:UIImage,highlightedImage:UIImage? = nil) {
@@ -102,7 +103,7 @@ open class AssistiveButton: UIButton {
         }
     }
     
-    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         guard self.moveEnable == true else {
             return
@@ -130,7 +131,7 @@ open class AssistiveButton: UIButton {
         super.touchesEnded(touches, with: event)
     }
     
-    override open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
     }
     
